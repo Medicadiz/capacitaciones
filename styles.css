@@ -3,6 +3,8 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-size: 16px;
+    /* Ajustar el tamaño de fuente base para dispositivos móviles */
 }
 
 .container {
@@ -18,16 +20,15 @@ img {
     object-fit: cover;
     position: absolute;
     opacity: 0.8;
-    /* Establecer la opacidad al 80% */
 }
 
 .buttons-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 columnas */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* Columnas automáticas, mínimo 100px */
     grid-template-rows: repeat(5, 1fr);
-    /* 5 filas */
-    gap: 30px;
+    gap: 15px;
+    /* Reduje el espacio entre los botones para dispositivos móviles */
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -38,26 +39,21 @@ img {
 
 .button-link {
     display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 15px;
-        font-size: 22px;
-        background-color: rgb(100, 168, 254);
-        /* Fondo azul RGB */
-        color: #fff;
-        /* Texto blanco */
-        border: none;
-        border-radius: 8px;
-        /* Bordes redondeados */
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        /* Transición suave del color de fondo */
-        width: calc(100% - 20px);
-        /* Ajusté el ancho para considerar el espacio entre los botones */
-        text-decoration: none;
-        /* Eliminar subrayado de enlace */
-        position: relative;
-        overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-size: 18px;
+    /* Ajuste del tamaño de fuente para dispositivos móviles */
+    background-color: rgb(100, 168, 254);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: calc(100% - 20px);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
 }
 
 .button-link::before {
@@ -79,5 +75,4 @@ img {
 
 .button-link:hover {
     background-color: rgb(80, 148, 234);
-    /* Color de fondo al pasar el mouse */
 }
